@@ -1,0 +1,63 @@
+.prescriptionWrite{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/rawpixel-600792-unsplash.jpg);
+    background-size: cover;
+   
+    background-attachment: fixed;
+    object-fit: cover;
+    background-position: center;
+}
+.writePrescriptionForm{
+    height: 80%;
+    width: 80%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(208, 211, 212,.7);
+    font-family: 'Bree Serif', serif;
+}
+.medicineName, .medicineTime, .prescriptionSubmit{
+    height: 4rem;
+    margin: .5rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+.medicineName{
+    width: 55%;
+}
+.medicineTime{
+    width: 30%;
+}
+.prescriptionSubmit{
+    width: 10%;
+    background: rgb(109, 146, 199);
+    color: azure;
+    transition: all .1s;
+    font-family: 'Bree Serif', serif;
+}
+.medicineName, .medicineTime{
+    padding-left: 2rem;
+}
+.prescriptionSubmit:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 3px #000;
+}
+@media only screen and (max-width: 749px){
+    
+    .writePrescriptionForm{
+        flex-direction: column;
+    }
+    .medicineName, .medicineTime, .prescriptionSubmit{
+        width: 95%;
+    }
+
+
+   
+}

@@ -1,0 +1,82 @@
+<% include partials/header %>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"
+          type="text/javascript"></script>
+
+
+
+<main class="home-body">
+        <section>
+            <div class="multipleBg">
+            </div>
+            <div class="multipleBg"></div>
+            <div class="multipleBg"></div>
+        </section>
+        <section>
+            <form action="/searchDoctor" class="searchDoctor" method="GET">
+                <input type="text" name="search" placeholder="Search Doctor" class="searchInput">
+                <button type="submit" class="btnSubmitbtn"><img class="btnImg" src="/public/img/2x/baseline_search_black_36dp.png" alt=""></button>
+            </form>
+        </section>
+        <section>
+            <h1>Top Doctors</h1>
+
+
+            <div class="doctorSmallProfile">
+              <% locals.doctors.forEach(function(doctors){%>
+                <div class="invidualDoctor">
+                    <div class="outlineImg">
+                        <img src="<%= doctors.thumbnail %>" alt="">
+                    </div>
+                    <div class="Doctor-name">
+                        <h3><%= doctors.name %></h3>
+                        <h4><%= doctors.specialization %></h4>
+                    </div>
+                    <a href="/showDoctorProfile/<%= doctors.id %>" class="viewDoctorProfile">View</a>
+                </div>
+                <% }); %>
+            </div>
+
+
+            <div style="width: 100%">
+                <div class="map-section-heading"> <h2 class="heading-text" style="text-align:center">Footprints of Our Doctors</span></h2></div>
+                    <div id="map" style="width: 100%; height: 420px;"></div>
+            </div>
+
+
+
+            <script type="text/javascript">
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 2,
+                center: new google.maps.LatLng(0, 0),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              });
+
+              var infowindow = new google.maps.InfoWindow();
+
+              var marker, i;
+
+              <% locals.locations.forEach(function(locations){ %>
+                marker = new google.maps.Marker({
+                  position: new google.maps.LatLng(<%= locations.lat %>,<%= locations.lng %>),
+                  map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                  return function() {
+                    infowindow.setContent(locations.location);
+                    infowindow.open(map, marker);
+                  }
+                })(marker, i));
+               <% }); %>
+            </script>
+
+
+
+            <% include partials/footer %>
+        </section>
+
+
+
+    </main>

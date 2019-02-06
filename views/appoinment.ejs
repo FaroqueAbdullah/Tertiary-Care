@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+
+<main class="doctorSignup-body">
+       <section>
+           <div>
+              <h2 class="doctorsform-heading">Doctor's form</h2>
+              <form action="/createAppointment"   method="POST" class="doctorsForm">
+                <div class="inputBox">
+                    <p class="inputLabel">Doctor ID</p>
+                    <input type="text" name="doctorID" class="inputTxt" value="<%= newvalues.doctorID %>" required>
+                </div>
+                <div class="inputBox">
+                    <p class="inputLabel">Doctor Name</p>
+                    <input type="text" name="doctorName" class="inputTxt" value="<%= newvalues.doctorName %>" required>
+                </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Name</p>
+                       <input type="text" name="patentName" class="inputTxt" placeholder="Enter Your name" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Location</p>
+                       <input type="text" name="location" class="inputTxt" placeholder="Enter Your Location" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Phone Number</p>
+                       <input type="text" name="PhoneNumber" class="inputTxt" placeholder="Enter Your Phone Number" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Problem</p>
+                       <input type="text" name="Problem" class="inputTxt" placeholder="Enter Your Problem" required>
+                   </div>
+                   <div class="inputBox">
+                       <input type="submit" value="Submit" class="submitbtn">
+                   </div>
+              </form>
+           </div>
+       </section>
+   </main>
+
+
+
+
+<% include partials/footer %>

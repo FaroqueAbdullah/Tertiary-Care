@@ -1,0 +1,64 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Tertiary Care</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/main.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/home.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/header.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/footer.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/form.css" />
+                 <link rel="stylesheet" type="text/css" media="screen" href="/public/css/mediaQuery.css" />
+                 <link rel="stylesheet" type="text/css" media="screen" href="/public/css/mypatientlist.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/doctorProfile.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/animation.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/searchPatient.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/addPlace.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/prescription.css" />
+                <link rel="stylesheet" type="text/css" media="screen" href="/public/css/prescriptionWrite.css" />
+
+
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script src="main.js"></script>
+            </head>
+            <body>
+                <header class="header">
+                    <div class="header-logo">
+                        <a href="/" class="Logo-text"><h1>Tertiary care</h1></a>
+
+                    </div>
+                    <div class="loginPanel">
+                      <% if(!user){ %>
+                        <div class="loginPanel-box">
+                            <a href="/auth/login">
+                                   <img src="./public/img/2x/baseline_account_circle_white_48dp.png" alt="" class="login-icon">
+                            </a>
+                        </div>
+                        <% }else{ %>
+                            <div class="loginPanel-box">
+                                <div class="loggedIn"><img src="<%= user.thumbnail %>" alt="" class="loggedIn-img"><div>
+                                <% if(user.category == "doctor"){ %>
+                                  <ul class="dropdown-list">
+                                      <li class="dropdown-item"><a href="/showDoctorProfile/<%= user._id %>">My Profile</a></li>
+                                      <li class="dropdown-item"><a href="/createDoctorProfile">Edit Profile</a></li>
+                                      <li class="dropdown-item"><a href="/createNewPlace">Add New Place</a></li>
+                                      <li class="dropdown-item"><a href="/createNewMapArea/<%= user._id %>">Add Map Area</a></li>
+                                      <li class="dropdown-item"><a href="/mypatientList/<%= user._id %>">Patient List</a></li>
+                                      <li class="dropdown-item"><a href="/auth/logout" style="color:rgb(231, 76, 60)">Logout</a></li>
+                                  </ul>
+                                <% }else{ %>
+                                  <ul class="dropdown-list">
+                                      <li class="dropdown-item"><a href="/mySchedule/<%= user._id %>">My Doctors</a></li>
+                                      <li class="dropdown-item"><a href="/showMyPrescription/<%= user._id %>">My Prescriptions</a></li>
+                                      <li class="dropdown-item"><a href="/createDoctorProfile">Register As Doctor</a></li>
+                                      <li class="dropdown-item"><a href="/auth/logout" style="color:rgb(231, 76, 60)">Logout</a></li>
+                                  </ul>
+                                  <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+
+                </header>

@@ -1,0 +1,64 @@
+<% include partials/header %>
+
+<main class="doctorSignup-body">
+       <section>
+           <div>
+              <h2 class="doctorsform-heading">Doctor's form</h2>
+              <form action="/editmyprofile/<%= user._id %> " onsubmit="return validateForm()"  name="doctorForm" method="POST" class="doctorsForm">
+                   <div class="inputBox">
+                       <p class="inputLabel">Name</p>
+                       <input type="text" name="name" class="inputTxt" value="<%= user.username %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">date of birth</p>
+                       <input type="date" name="dateOfBirth" class="inputTxt" value="<%= user.dateOfBirth %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Gender</p>
+                       <div class="gender_container">
+                           Male<input type="radio" value="male" name="Gender" >
+                           Female<input type="radio" value="male" name="Gender" >
+                           Other<input type="radio" name="Gender" >
+
+                       </div>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Location</p>
+                       <input type="text" name="docLocation" class="inputTxt" value="<%= user.docLocation %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">qualification</p>
+                       <input type="text" name="qualification" class="inputTxt" value="<%= user.qualification %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Spcialization</p>
+                       <input type="text" name="specialization" class="inputTxt" value="<%= user.specialization %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">E-mail</p>
+                       <input type="mail" name="mailId" class="inputTxt" value="<%= user.mailId %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Contact Number</p>
+                       <input type="number" name="phoneNumber" class="inputTxt" value="<%= user.phoneNumber %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">experience</p>
+                       <input type="text" name="experience" class="inputTxt" value="<%= user.experience %>" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">description</p>
+                       <textarea value="<%= user.description %>" name="description" cols="60" rows="5"></textarea>
+                   </div>
+                   <div class="inputBox">
+                       <input type="submit" value="Submit" class="submitbtn">
+                   </div>
+
+              </form>
+           </div>
+
+       </section>
+   </main>
+
+
+<% include partials/footer %>

@@ -1,0 +1,15 @@
+@media only screen and (max-width: 749px){
+    .doctorSignup-body section div{
+        width: 90%;
+    }
+    .doctorSignup-body section div form{
+        width: 95%;
+    }
+    .doctorSignup-body section div form .inputBox .inputTxt{
+        font-size: 80%;
+    }
+
+
+
+   
+}

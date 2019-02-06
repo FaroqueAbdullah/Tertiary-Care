@@ -1,0 +1,69 @@
+.prescription{
+    height: 100%;
+    width: 100%;
+    font-family: 'Bree Serif', serif;
+}
+.prescriptionContainer{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prescriptionContainerbox{
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(208, 211, 212);
+
+}
+.prescriptionitem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .25rem;
+    background-color: rgb(251, 252, 252);
+    }
+
+.prescriptionImg{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.DoctorNamepres{
+    width: 25%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.prescriptionitem .medicineName{
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.prescriptionitem .prestime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+
+
+}
+.prescriptionDoctorImg{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}

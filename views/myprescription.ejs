@@ -1,0 +1,47 @@
+<% include partials/header %>
+
+    <div class="prescription">
+        <div class="prescriptionContainer">
+            <ul class="prescriptionContainerbox">
+                <li class="prescriptionitem">
+                    <div class="prescriptionImg">
+
+                    </div>
+                    <div class="DoctorNamepres">
+                        <h3>Doctor Name</h3>
+                    </div>
+                    <div class="medicineName">
+                        <h3>Medicine</h3>
+                    </div>
+                    <div class="prestime">
+                        <h3>Time</h3>
+                    </div>
+
+                </li>
+                <% prescription.forEach(function(prescription){%>
+                <li class="prescriptionitem">
+                        <div class="prescriptionImg">
+                            <img src="<%= prescription.doctorThumbnil %>" alt="" class="prescriptionDoctorImg">
+                        </div>
+                        <div class="DoctorNamepres">
+                            <p><%= prescription.doctorName %></p>
+                        </div>
+                        <div class="medicineName">
+                            <p><%= prescription.medicineName %></p>
+                        </div>
+                        <div class="prestime">
+                            <p><%= prescription.medicineTime %></p>
+                        </div>
+
+                    </li>
+                    <% }); %>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+<% include partials/footer %>

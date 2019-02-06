@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+
+    <main class="prescriptionWrite">
+        <form action="/writePrescription/<%= newvalues.patientID %>" class="writePrescriptionForm" method="POST">
+            <input type="text" name="medicineName" class="medicineName" placeholder="Medicine Name">
+            <input type="text" name="medicineTime" class="medicineTime" placeholder="Medicine Time-Table">
+            <input type="submit" value="Submit" class="prescriptionSubmit">
+        </form>
+    </main>
+
+
+
+
+<% include partials/footer %>

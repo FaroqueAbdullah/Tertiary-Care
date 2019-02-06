@@ -1,0 +1,83 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: rgb(109, 146, 199);
+    box-shadow: 0 5px 4px #888888;
+    height: 7rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+   
+}
+.loginPanel-box{
+    width: 5rem;
+}
+.loggedIn-img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+   
+}
+.dropdown-list{
+    position: absolute;
+    width: 15rem;
+    display: none;
+    z-index: 5;
+    list-style: none;
+    
+    right: 10%;
+
+    
+}
+.dropdown-list .dropdown-item{
+    padding: 1rem;
+    margin-bottom: .2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(248, 249, 249,.5);
+}
+.dropdown-list .dropdown-item a{
+    text-decoration: none;
+    color: rgb(20, 90, 50);
+    
+    font-family: 'Bree Serif', serif;
+    
+}
+.loggedIn{
+    position: relative;
+}
+.loggedIn:hover .dropdown-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.login-icon{
+    width: 4rem;
+    height: 4rem;
+    fill: aliceblue;
+}
+.loginPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Logo-text{
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    color: aliceblue;
+    margin: 5px;
+
+}
+.header-logo{
+    padding: 5px;
+}
+.Logout{
+    color: rgb(231, 76, 60);
+}

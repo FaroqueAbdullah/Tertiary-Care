@@ -1,0 +1,398 @@
+
+
+.doctorProfile-body{
+
+    height: 100%;
+    width: 100%;
+    background: rgb(236, 240, 241);
+    font-family: 'Bree Serif', serif;
+}
+.doctorProfile-body section:nth-child(1){
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 90vh;
+
+    margin: 0 auto;
+}
+
+.col-1{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 249, 249);
+    border-radius: 5px;
+}
+.profileImg-container{
+    width: 8rem;
+    height: 8rem;
+    border: 4px dotted rgb(109, 146, 199);
+    border-radius: 50%;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileImg{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+
+}
+.col-2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 249, 249);
+    border-radius: 5px;
+}
+.col-1, .col-2{
+    height: 85%;
+    font-family: 'Bree Serif', serif;
+}
+.doctorName{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+.doctorsInfo-container{
+    width: 90%;
+
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.infoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    background: rgb(247, 249, 249);
+}
+.infolabel{
+    width: 30%;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+.infolabel-value{
+    width: 70%;
+}
+.infoItem:not(:first-child){
+    margin-top: .5rem;
+}
+
+
+.doctorProfile-body section:nth-child(2){
+    width: 90%;
+    background: rgb(247, 249, 249);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.doctorProfile-body section:nth-child(3){
+    width: 90%;
+    background: rgb(247, 249, 249);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+}
+.doctorProfile-body section:nth-child(3) h2{
+    margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.doctorProfile-body section:nth-child(3) .timeTable-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 95%;
+}
+.doctorProfile-body section:nth-child(3) .timeTable-container li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.doctorProfile-body section:nth-child(3) .timeTable-container li .table-heading{
+    text-transform: uppercase;
+    background: rgb(242, 243, 244);
+    margin: .25rem;
+}
+.h-place{
+    width: 55%;
+}
+.h-day, .h-time, .h-fee{
+    width: 10%;
+}
+.h-appoint{
+    width: 15%;
+    text-align: center;
+}
+.doctorProfile-body section:nth-child(3) .timeTable-container li .table-heading a{
+    width: 90%;
+    background: rgb(109, 146, 199);
+    border-radius: 5px;
+    text-decoration: none;
+    color:white;
+    margin: 0 auto;
+    text-align: center;
+}
+.responsive-timeTable-container{
+    display: none;
+}
+
+.doctorProfile-body section:nth-child(4){
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 249, 249);
+}
+.commentPost{
+    width: 95%;
+    margin-bottom: .5rem;
+    text-align: center;
+
+}
+.commentPost h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.commentform{
+    width: 100%;
+}
+.commentTxt{
+    width: 80%;
+    height: 3rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding-left: 2rem;
+    font-size: 100%;
+}
+.submitbtncmt{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(109, 146, 199);
+    color: aliceblue;
+    transition: all .1s;
+
+}
+.submitbtncmt:hover{
+    box-shadow: 0 2px 3px #000;
+    transform: translateY(-2px);
+}
+.commentRead{
+    width: 95%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.commentRead li{
+    width: 100%;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+}
+.commentImg{
+    width: 30%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+.commentImg img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.submitRate{
+  margin: 0 auto;
+  border:none;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(109, 146, 199);
+  text-decoration: none;
+  color: #dddddd;
+  padding: 0.25rem;
+}
+.submitRate:hover{
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 2px #000;
+}
+.rateBtn{
+  width: 100%;
+
+}
+
+
+@media only screen and (max-width: 749px){
+
+
+    /*Doctor Profile*/
+    .doctorProfile-body section:nth-child(1){
+        flex-direction: column;
+
+        width: 100%;
+
+
+    }
+    .col-1,.col-2{
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .col-1{
+        margin-top: 7rem;
+    }
+    .infolabel{
+        width: 40%;
+        text-transform: capitalize;
+        letter-spacing: 0px;
+    }
+    .infolabel-value{
+        width: 60%;
+    }
+    .doctorProfile-body section:nth-child(3) .timeTable-container{
+        display: none;
+    }
+    .responsive-timeTable-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 95%;
+
+    }
+    .responsive-timetable-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        text-align: center;
+        background: rgb(242, 243, 244);
+        padding: .5rem;
+        margin-bottom: .5rem;
+    }
+    .responsive-timetable-item div a{
+        width: 70%;
+        height: 3rem;
+        border-radius: 4px;
+        background-color: rgb(109, 146, 199);
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+    .doctorProfile-body section:nth-child(2){
+        margin-top: 1rem;
+    }
+    .commentImg h3{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/*rating*/
+.row {
+    text-align: center;
+  }
+
+  .rate {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  fieldset input {
+    display: none;
+  }
+
+  label {
+    float: right;
+    font-size: 0;
+    color: #d9d9d9;
+  }
+
+  label:before {
+    content: "\f005";
+    font-family: FontAwesome;
+    font-size: 40px;
+  }
+
+  label:hover,
+  label:hover ~ label {
+    color: rgb(109, 146, 199);
+    transition: 0.2s;
+  }
+
+  input:checked ~ label {
+    color: rgb(50, 87, 168);
+  }
+
+  input:checked ~ label:hover,
+  input:checked ~ label:hover ~ label {
+    color: rgb(109, 146, 199);
+    transition: 0.2s;
+  }
+
+
+  /* Half-star*/
+
+  .star-half {
+    position: relative;
+  }
+
+  .star-half:before {
+    position: absolute;
+    content: "\f089";
+    padding-right: 0;
+  }

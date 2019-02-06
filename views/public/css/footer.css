@@ -1,0 +1,41 @@
+footer {
+    background-color: rgb(109, 146, 199);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #fff; }
+
+  .social {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; }
+    .social a {
+      padding: 7px;
+      width: 35px;
+      height: 35px;
+      margin: 0 2px;
+      background: #fff;
+      border-radius: 50%;
+      vertical-align: middle; }
+      .social a:hover {
+        background: #65c2ed; }
+      .social a.linkedin {
+        padding: 4px; }
+      .social a svg .face, .social a svg .twit, .social a svg .link {
+        fill: #000; }
+
+  .bottom-bar {
+    font-size: 1.5rem;
+    text-align: center; }
+    .bottom-bar a {
+      text-decoration: none;
+      color: #fff; }
+
+.loginPage-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

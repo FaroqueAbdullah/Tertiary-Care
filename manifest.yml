@@ -1,0 +1,6 @@
+---
+applications:
+- name: myapp
+  path: .
+  buildpack: nodejs_buildpack
+  memory: 512M

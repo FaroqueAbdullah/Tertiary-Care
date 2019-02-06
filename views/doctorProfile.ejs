@@ -1,0 +1,151 @@
+<% include partials/header %>
+
+<main class="doctorProfile-body">
+        <section>
+            <div class="col-1">
+                <div class="profileImg-container">
+                    <img src="<%= locals.users.thumbnail %>" alt="User Image" class="profileImg">
+                </div>
+                <div class="doctorName">
+                    <h2 class="nameTxt"><%= locals.users.name %></h2>
+                    <h3 class="specialization"><%= locals.users.specialization %></h3>
+                    <div class="row">
+                        <h3>Patient Satisfaction <span><%= locals.users.totalRating/locals.users.totalPerson %></span></h3>
+                        <form method="POST" action="/submitRating/<%= locals.users.id %>/<%= locals.users.totalRating %>/<%= locals.users.totalPerson %>">
+                        <fieldset class="rate">
+                          <input id="rate2-star5" type="radio" name="rate2" value="5" />
+                          <label for="rate2-star5" title="Awesome">5</label>
+
+                          <input id="rate2-star5-half" type="radio" name="rate2" value="4.5" />
+                          <label class="star-half" for="rate2-star5-half" title="Excellent">4.5</label>
+
+                          <input id="rate2-star4" type="radio" name="rate2" value="4" />
+                          <label for="rate2-star4" title="Very good">4</label>
+
+                          <input id="rate2-star3-half" type="radio" name="rate2" value="3.5" />
+                          <label class="star-half" for="rate2-star3-half" title="Good">3.5</label>
+
+                          <input id="rate2-star3" type="radio" name="rate2" value="3" />
+                          <label for="rate2-star3" title="Satisfactory">3</label>
+
+                          <input id="rate2-star2-half" type="radio" name="rate2" value="2.5" />
+                          <label class="star-half" for="rate2-star2-half" title="Unsatisfactory">2.5</label>
+
+                          <input id="rate2-star2" type="radio" name="rate2" value="2" />
+                          <label for="rate2-star2" title="Bad">2</label>
+
+                          <input id="rate2-star1-half" type="radio" name="rate2" value="1.5" />
+                          <label class="star-half" for="rate2-star1-half" title="Very bad">1.5</label>
+
+                          <input id="rate2-star1" type="radio" name="rate2" value="1" />
+                          <label for="rate2-star1" title="Awful">1</label>
+
+                          <input id="rate2-star0-half" type="radio" name="rate2" value="0.5" />
+                          <label class="star-half" for="rate2-star0-half" title="Horrific">0.5</label>
+                        </fieldset>
+                        <div class="rateBtn">
+                          <input type="submit" name="submit" value="submit" class="submitRate">
+                        </div>
+                      </form>
+                      </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <div class="doctorsInfo"><h1 class="doctorsinfoHeading">Doctor's Information</h1></div>
+                <ul class="doctorsInfo-container">
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>Qualification</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.qualification %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>Date of birth</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.dateOfBirth %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>Gender</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.Gender %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>Experience</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.experience %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>E-Mail</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.mailId %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>Contact Number</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.phoneNumber %></h3></div>
+                    </li>
+                    <li class="infoItem">
+                        <div class="infolabel"><h3>location</h3></div>
+                        <div class="infolabel-value"><h3><%= locals.users.docLocation %></h3></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="doctorDescription">
+                <h4><%= locals.users.description %></h4>
+            </div>
+        </section>
+        <section>
+            <h2>place to Visit</h2>
+            <ul class="timeTable-container">
+                <li class="timetable-item">
+                    <h3 class="table-heading h-place">place</h3>
+                    <h3 class="table-heading h-day">day</h3>
+                    <h3 class="table-heading h-time">time</h3>
+                    <h3 class="table-heading h-fee">Fee</h3>
+                    <div class="table-heading h-appoint"></div>
+                </li>
+                <% locals.locations.forEach(function(locations){ %>
+                <li class="timetable-item">
+                    <p class="table-heading h-place"><%= locations.location %></p>
+                    <p class="table-heading h-day"><%= locations.day %></p>
+                    <p class="table-heading h-time"><%= locations.time %></p>
+                    <p class="table-heading h-fee"><%= locations.fee %></p>
+                    <div class="table-heading h-appoint"><a href="/appointment/<%= locals.users.id %>///<%= locals.users.name %>">appointment</a></div>
+                </li>
+                <% }) %>
+            </ul>
+            <ul class="responsive-timeTable-container">
+              <% locals.locations.forEach(function(locations){ %>
+                <li class="responsive-timetable-item">
+                    <p class="table-heading"><%= locations.location %></p>
+                    <p class="table-heading"><%= locations.day %></p>
+                    <p class="table-heading"><%= locations.time %></p>
+                    <p class="table-heading"><%= locations.fee %></p>
+                    <div class="table-heading"><a href="/appointment/<%= locals.users.id %>///<%= locals.users.name %>">appointment</a></div>
+                </li>
+                <% }) %>
+
+            </ul>
+        </section>
+        <section>
+            <div class="commentPost">
+                    <h3>Write Your Comment</h3>
+                    <form action="/commentsfordoctor/<%= locals.users.id %>" class="commentform" method="POST">
+                        <input type="text" name="comment" class="commentTxt" placeholder="Place Your Comment">
+                        <input type="submit" value="Submit" class="submitbtncmt">
+                    </form>
+            </div>
+            <ul class="commentRead">
+              <% locals.comments.forEach(function(comm){ %>
+               <li class="eachComment">
+                    <a href="#" class="commentImg">
+                        <img src="<%= comm.patentThumbnil %>" alt="">
+                        <h3><%= comm.patentName %></h3>
+                    </a>
+                   <div class="commentTxtRead">
+                       <p><%= comm.comment %></p>
+                   </div>
+               </li>
+               <% }) %>
+            </ul>
+        </section>
+
+    </main>
+
+<% include partials/footer %>

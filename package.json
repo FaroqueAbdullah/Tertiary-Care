@@ -1,0 +1,33 @@
+{
+  "name": "oauth-playlist",
+  "version": "1.0.0",
+  "description": "Course files for The Net Ninja OAuth playlist on YouTube",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamshaunjp/oauth-playlist.git"
+  },
+  "author": "The Net Ninja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamshaunjp/oauth-playlist/issues"
+  },
+  "homepage": "https://github.com/iamshaunjp/oauth-playlist#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.4",
+    "node-geocoder": "^3.22.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path": "^0.12.7",
+    "regexp": "^1.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<main class="doctorSignup-body">
+       <section>
+           <div>
+              <h2 class="doctorsform-heading">Doctor's form</h2>
+              <form action="/createNewVisitingPlace/<%= user._id %> "   method="POST" class="doctorsForm">
+                   <div class="inputBox">
+                       <p class="inputLabel">Location</p>
+                       <input type="text" name="location" class="inputTxt" placeholder="Enter Your location" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Time</p>
+                       <input type="text" name="time" class="inputTxt" placeholder="Enter Your Time" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Day</p>
+                       <input type="text" name="day" class="inputTxt" placeholder="Enter Your day of week" required>
+                   </div>
+                   <div class="inputBox">
+                       <p class="inputLabel">Fee</p>
+                       <input type="text" name="fee" class="inputTxt" placeholder="Enter Your consulting fee" required>
+                   </div>
+                   <div class="inputBox">
+                       <input type="submit" value="Submit" class="submitbtn" >
+                   </div>
+              </form>
+           </div>
+       </section>
+   </main>
+
+
+<% include partials/footer %>
